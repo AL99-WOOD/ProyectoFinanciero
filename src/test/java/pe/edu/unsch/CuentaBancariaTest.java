@@ -18,4 +18,35 @@ public class CuentaBancariaTest {
 
     }
 
+    @Test
+    void retirarConSaldoInsuficiente() {
+
+        CuentaBancaria cuenta = new CuentaBancaria(100);
+
+        cuenta.retirar(500);
+
+        assertEquals(100, cuenta.getSaldo());
+
+    }
+
+    @Test
+    void retirarMontoNegativo() {
+
+        CuentaBancaria cuenta = new CuentaBancaria(1000);
+
+        cuenta.retirar(-200);
+
+        assertEquals(1000, cuenta.getSaldo());
+
+    }
+
+    @Test
+    void depositarMontoValido() {
+
+        CuentaBancaria cuenta = new CuentaBancaria(1000);
+        cuenta.depositar(500);
+        assertEquals(1500, cuenta.getSaldo());
+
+    }
+
 }
