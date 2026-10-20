@@ -15,4 +15,14 @@ public class CuentaBancariaTest {
 
         assertEquals(150, cuenta.obtenerSaldo());
     }
+
+    @Test
+    void retiroDebeDisminuirSaldo() {
+
+        CuentaBancaria cuenta = new CuentaBancaria(100);
+
+        cuenta.retirar(30);
+
+        assertEquals(70, cuenta.obtenerSaldo());
+    }
 }
