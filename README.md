@@ -2,7 +2,7 @@
 
 [![CI Java Maven](https://github.com/AL99-WOOD/proyectofinanciero/actions/workflows/ci.yml/badge.svg)](https://github.com/AL99-WOOD/proyectofinanciero/actions/workflows/ci.yml)
 
-Sistema financiero de ejemplo para los Laboratorios 02 y 03 del curso **Construcción y Evolución de Software (IS-388)** – EPIS, UNSCH.
+Sistema financiero de ejemplo para los Laboratorios de Construcción y Evolución de Software.
 
 La clase `CuentaBancaria` permite depositar, retirar y transferir entre cuentas. Cada cambio se valida automáticamente con JUnit 5 en GitHub Actions, y JaCoCo mide la cobertura de las pruebas.
 
