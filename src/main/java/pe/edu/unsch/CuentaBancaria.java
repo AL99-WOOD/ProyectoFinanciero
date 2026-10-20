@@ -34,20 +34,6 @@ public class CuentaBancaria {
 
     }
 
-    public boolean pagarServicio(String servicio, double monto) {
-
-        if (servicio == null || servicio.isBlank()) {
-            return false;
-        }
-
-        if (monto > 0 && monto <= saldo) {
-            saldo -= monto;
-            return true;
-        }
-
-        return false;
-    }
-
     public double getSaldo() {
         return saldo;
     }
