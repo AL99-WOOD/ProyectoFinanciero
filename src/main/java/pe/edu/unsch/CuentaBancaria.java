@@ -9,16 +9,18 @@ public class CuentaBancaria {
     }
 
     public void depositar(double monto) {
-        saldo += monto;
+        if (monto > 0) {
+            saldo += monto;
+        }
     }
 
     public void retirar(double monto) {
-        if (monto <= saldo) {
+        if (monto > 0 && monto <= saldo) {
             saldo -= monto;
         }
     }
 
-    public double obtenerSaldo() {
+    public double getSaldo() {
         return saldo;
     }
 }
