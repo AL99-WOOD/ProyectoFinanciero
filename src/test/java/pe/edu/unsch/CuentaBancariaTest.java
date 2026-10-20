@@ -49,4 +49,21 @@ public class CuentaBancariaTest {
 
     }
 
+    @Test
+    void transferirDinero() {
+
+        CuentaBancaria origen =
+                new CuentaBancaria(1000);
+
+        CuentaBancaria destino =
+                new CuentaBancaria(500);
+
+        origen.transferir(destino, 200);
+
+        assertEquals(800, origen.getSaldo());
+
+        assertEquals(700, destino.getSaldo());
+
+    }
+
 }

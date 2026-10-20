@@ -20,6 +20,20 @@ public class CuentaBancaria {
         }
     }
 
+    public void transferir(
+            CuentaBancaria destino,
+            double monto) {
+
+        if (monto > 0 && monto <= saldo) {
+
+            this.saldo -= monto;
+
+            destino.depositar(monto);
+
+        }
+
+    }
+
     public double getSaldo() {
         return saldo;
     }
