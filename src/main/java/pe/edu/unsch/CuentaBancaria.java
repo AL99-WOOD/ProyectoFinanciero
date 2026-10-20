@@ -8,10 +8,12 @@ public class CuentaBancaria {
         this.saldo = saldoInicial;
     }
 
-    public void depositar(double monto) {
-        if (monto > 0) {
+    public boolean depositar(double monto) {
+        if (monto > 0 && Double.isFinite(monto)) {
             saldo += monto;
+            return true;
         }
+        return false;
     }
 
     public void retirar(double monto) {
@@ -20,16 +22,11 @@ public class CuentaBancaria {
         }
     }
 
-    public void transferir(
-            CuentaBancaria destino,
-            double monto) {
+    public void transferir(CuentaBancaria destino, double monto) {
 
         if (monto > 0 && monto <= saldo) {
-
             this.saldo -= monto;
-
             destino.depositar(monto);
-
         }
 
     }
