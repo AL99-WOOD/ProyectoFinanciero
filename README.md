@@ -4,7 +4,7 @@
 
 Sistema financiero de ejemplo para los Laboratorios 02 y 03 del curso **Construcción y Evolución de Software (IS-388)** – EPIS, UNSCH.
 
-La clase `CuentaBancaria` permite depositar, retirar, transferir entre cuentas y pagar servicios. Cada cambio se valida automáticamente con JUnit 5 en GitHub Actions, y JaCoCo mide la cobertura de las pruebas.
+La clase `CuentaBancaria` permite depositar, retirar y transferir entre cuentas. Cada cambio se valida automáticamente con JUnit 5 en GitHub Actions, y JaCoCo mide la cobertura de las pruebas.
 
 ## Requisitos
 
@@ -35,7 +35,6 @@ src
 |---|---|
 | `main` | Versión integrada |
 | `feature-transferencia` | Retiro (Lab 02) y transferencia entre cuentas (Lab 03) |
-| `feature-pago-servicio` | Pago de servicios (actividad final del Lab 03) |
 
 ## Nota sobre JaCoCo y JDK recientes
 
